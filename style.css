@@ -1,0 +1,160 @@
+:root {
+  --bg: #0f1419;
+  --fg: #e7ecf1;
+  --muted: #9aa7b5;
+  --accent: #6ec1ff;
+  --line: #243041;
+  --card: #161d27;
+  --max: 42rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 17px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: "IBM Plex Sans", "Segoe UI", system-ui, -apple-system, sans-serif;
+  line-height: 1.55;
+}
+
+.wrap {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 2.5rem 1.25rem 4rem;
+}
+
+.hero {
+  margin-bottom: 2.25rem;
+  padding-bottom: 1.75rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.eyebrow {
+  margin: 0 0 0.5rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+h1 {
+  margin: 0 0 0.4rem;
+  font-size: clamp(1.75rem, 4vw, 2.15rem);
+  font-weight: 650;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+
+.headline {
+  margin: 0 0 1rem;
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+.links a,
+footer a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.links a:hover,
+footer a:hover {
+  text-decoration: underline;
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
+h2 {
+  margin: 0 0 0.75rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+h3 {
+  margin: 0 0 0.45rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.meta {
+  color: var(--muted);
+  font-weight: 500;
+  font-size: 0.92rem;
+}
+
+p {
+  margin: 0 0 0.75rem;
+}
+
+.focus,
+.job ul {
+  margin: 0;
+  padding-left: 1.15rem;
+}
+
+.focus li,
+.job ul li {
+  margin-bottom: 0.4rem;
+}
+
+.job {
+  margin-bottom: 1.35rem;
+  padding: 1rem 1rem 0.85rem;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.skills {
+  margin: 0;
+}
+
+.skills > div {
+  display: grid;
+  grid-template-columns: 9.5rem 1fr;
+  gap: 0.35rem 1rem;
+  padding: 0.55rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.skills > div:last-child {
+  border-bottom: none;
+}
+
+.skills dt {
+  margin: 0;
+  color: var(--muted);
+  font-weight: 500;
+  font-size: 0.92rem;
+}
+
+.skills dd {
+  margin: 0;
+}
+
+footer {
+  margin-top: 2.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+@media (max-width: 560px) {
+  .skills > div {
+    grid-template-columns: 1fr;
+  }
+}
